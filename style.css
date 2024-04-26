@@ -11,11 +11,9 @@
 
 :root {
   --heading-font: "Lora", serif;
-  --body-font: Arial, sans-serif;
   --primary-color: #007bff;
   --secondary-color: #ffffff;
   --gray-color: #808080;
-  --hero-image: "https://static.wixstatic.com/media/84770f_55e52c1ac81f450fadd6509cbc317d0b~mv2.jpg/v1/fill/w_1823,h_1189,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_55e52c1ac81f450fadd6509cbc317d0b~mv2.jpg";
 }
 
 body {
