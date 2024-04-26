@@ -1,0 +1,281 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+
+
+/* root stylings  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --heading-font: "Lora", serif;
+  --body-font: Arial, sans-serif;
+  --primary-color: #007bff;
+  --secondary-color: #ffffff;
+  --gray-color: #808080;
+  --hero-image: "https://static.wixstatic.com/media/84770f_55e52c1ac81f450fadd6509cbc317d0b~mv2.jpg/v1/fill/w_1823,h_1189,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/84770f_55e52c1ac81f450fadd6509cbc317d0b~mv2.jpg";
+}
+
+body {
+  font-family: "Lora", serif;
+}
+
+section {
+  margin-bottom: 120px;
+}
+
+/* Navbar Styles */
+
+.navbar {
+  height: 60px;
+  z-index: 9;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  color: var(--secondary-color);
+}
+
+.navbar-custom {
+  width: calc(66.67% - 30px);
+  margin: auto;
+}
+
+.navbar.scrolled {
+  background-color: white;
+  color: black;
+}
+
+/* Hero Section */
+
+.section-hero {
+  position: relative;
+  padding: 0;
+}
+
+.section-hero-description {
+  width: 40%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  z-index: 10;
+}
+
+.carousel {
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+}
+
+.carousel-text {
+  z-index: 10;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px;
+  color: var(--secondary-color);
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  align-self: end;
+  margin-bottom: 40px;
+  color: var(--secondary-color);
+}
+
+.section-image-grid {
+  padding: 0;
+}
+
+/* Testimonal section  */
+
+.testimonial-description {
+  width: 70%;
+}
+
+.testimonial-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.carousel-secondary {
+  height: 400px;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* images-slider style  */
+
+.slider-wrapper {
+  position: relative;
+}
+.slider-wrapper .slide-button {
+  position: absolute;
+  top: 50%;
+  outline: none;
+  border: none;
+  height: 50px;
+  width: 50px;
+  z-index: 5;
+  color: #fff;
+  display: flex;
+  cursor: pointer;
+  font-size: 2.2rem;
+  background: #000;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+.slider-wrapper .slide-button:hover {
+  background: #404040;
+}
+.slider-wrapper .slide-button#prev-slide {
+  left: -25px;
+  display: none;
+}
+.slider-wrapper .slide-button#next-slide {
+  right: -25px;
+}
+.slider-wrapper .image-list {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 18px;
+  font-size: 0;
+  list-style: none;
+  margin-bottom: 30px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slider-wrapper .image-list::-webkit-scrollbar {
+  display: none;
+}
+.slider-wrapper .image-list .image-item {
+  width: 325px;
+  height: 400px;
+  object-fit: cover;
+}
+.container .slider-scrollbar {
+  height: 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.slider-scrollbar .scrollbar-track {
+  background: #ccc;
+  width: 100%;
+  height: 2px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  position: relative;
+}
+.slider-scrollbar:hover .scrollbar-track {
+  height: 4px;
+}
+.slider-scrollbar .scrollbar-thumb {
+  position: absolute;
+  background: #000;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 100%;
+  cursor: grab;
+  border-radius: inherit;
+}
+.slider-scrollbar .scrollbar-thumb:active {
+  cursor: grabbing;
+  height: 8px;
+  top: -2px;
+}
+.slider-scrollbar .scrollbar-thumb::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -10px;
+  bottom: -10px;
+}
+
+
+/* Styles for mobile and tablets */
+
+@media only screen and (max-width: 786px) {
+  .navbar-custom {
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 60px;
+  }
+
+  .heading-hero{
+    font-size: 18px;
+  }
+
+  .section-hero-description {
+    width: 80%;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+
+  .btn-primary{
+    font-size: 12px;
+  }
+
+  .testimonial-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel {
+    height: 225px;
+    overflow: hidden;
+  }
+
+  .carousel-text {
+    z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px;
+    font-size: 12px;
+  }
+
+  .collapse{
+    background-color: var(--secondary-color);
+    padding: 10px;
+    z-index: 9;
+  }
+
+  .slider-wrapper .slide-button {
+    display: none !important;
+  }
+  .slider-wrapper .image-list {
+    gap: 10px;
+    margin-bottom: 15px;
+    scroll-snap-type: x mandatory;
+  }
+  .slider-wrapper .image-list .image-item {
+    width: 280px;
+    height: 380px;
+  }
+  .slider-scrollbar .scrollbar-thumb {
+    width: 20%;
+  }
+}
